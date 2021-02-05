@@ -171,7 +171,7 @@ abstract class Message
 	 */
 	public function getHeaders()
 	{
-		return array_map('end', $this->headers);
+        	return array_map(fn($item) => end($item),$this->headers);
 	}
 
 
